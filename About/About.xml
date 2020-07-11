@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>No vanilla meals</name>
+  <packageId>Mlie.NoVanillaMeals</packageId>
+  <author>Mlie</author>
+  <url>https://github.com/emipa606/NoVanillaMeals</url>
+  <supportedVersions>
+    <li>1.1</li>
+  </supportedVersions>
+  <modDependencies />
+  <loadAfter />
+  <description>Just a simple patch-mod that removes all vanilla meals definitions from the game. 
+
+For players that want to only use and find modded meals.
+
+Base-classes are untouched so they still can be used by mods.
+
+Causes errors if no other meals are loaded.</description>
+</ModMetaData>

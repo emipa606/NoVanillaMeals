@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+  <Operation Class="PatchOperationSequence">
+    <operations>
+      <li Class="PatchOperationRemove">
+        <xpath>/Defs/ThingDef[defName="MealSurvivalPack" or defName="MealNutrientPaste" or defName="MealSimple" or defName="MealFine" or defName="MealLavish"]</xpath>
+      </li>
+      <li Class="PatchOperationRemove">
+        <xpath>/Defs/RecipeDef[defName="CookMealSimple" or defName="CookMealSimpleBulk" or defName="CookMealFine" or defName="CookMealFineBulk" or defName="CookMealLavish" or defName="CookMealLavishBulk" or defName="CookMealSurvival" or defName="CookMealSurvivalBulk"]</xpath>
+      </li>
+      <li Class="PatchOperationRemove">
+        <xpath>/Defs/ScenarioDef[defName="Crashlanded"]/scenario/parts/li[19]</xpath>
+      </li>
+      <li Class="PatchOperationRemove">
+        <xpath>/Defs/ScenarioDef[defName="Crashlanded"]/scenario/parts/li[5]</xpath>
+      </li>
+      <li Class="PatchOperationRemove">
+        <xpath>/Defs/ScenarioDef[defName="TheRichExplorer"]/scenario/parts/li[6]</xpath>
+      </li>
+      <li Class="PatchOperationRemove">
+        <xpath>/Defs/TraderKindDef[defName="Visitor_Outlander_Standard"]/stockGenerators/li[3]</xpath>
+      </li>
+      <li Class="PatchOperationRemove">
+        <xpath>/Defs/InstructionDef[defName="AddBillSimpleMeal"]</xpath>
+      </li>
+      <li Class="PatchOperationRemove">
+        <xpath>/Defs/ThingDef[defName="ElectricStove" or defName="FueledStove" or defName="Campfire"]/recipes[li="CookMealSimple" or li="CookMealFine" or li="CookMealLavish" or li="CookMealSurvival" or li="CookMealSimpleBulk" or li="CookMealFineBulk" or li="CookMealLavishBulk" or li="CookMealSurvivalBulk"]</xpath>
+      </li>
+    </operations>
+  </Operation>
+</Patch>
