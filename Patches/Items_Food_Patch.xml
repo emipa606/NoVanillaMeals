@@ -2,11 +2,79 @@
 <Patch>
   <Operation Class="PatchOperationSequence">
     <operations>
-      <li Class="PatchOperationRemove">
-        <xpath>/Defs/ThingDef[defName="MealSurvivalPack" or defName="MealNutrientPaste" or defName="MealSimple" or defName="MealFine" or defName="MealLavish"]</xpath>
+      <!-- <li Class="PatchOperationRemove"> -->
+      <!-- <xpath>/Defs/ThingDef[defName="MealSurvivalPack" or defName="MealNutrientPaste" or defName="MealSimple" or defName="MealFine" or defName="MealLavish"]</xpath> -->
+      <!-- </li> -->
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="MealSurvivalPack"]</xpath>
+        <value>
+          <ThingDef>
+            <defName>MealSurvivalPack</defName>
+            <label>dummy</label>
+            <thingClass>ThingWithComps</thingClass>
+          </ThingDef>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="MealNutrientPaste"]</xpath>
+        <value>
+          <ThingDef>
+            <defName>MealNutrientPaste</defName>
+            <label>dummy</label>
+            <thingClass>ThingWithComps</thingClass>
+          </ThingDef>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="MealSimple"]</xpath>
+        <value>
+          <ThingDef>
+            <defName>MealSimple</defName>
+            <label>dummy</label>
+            <thingClass>ThingWithComps</thingClass>
+          </ThingDef>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="MealFine"]</xpath>
+        <value>
+          <ThingDef>
+            <defName>MealFine</defName>
+            <label>dummy</label>
+            <thingClass>ThingWithComps</thingClass>
+          </ThingDef>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="MealLavish"]</xpath>
+        <value>
+          <ThingDef>
+            <defName>MealLavish</defName>
+            <label>dummy</label>
+            <thingClass>ThingWithComps</thingClass>
+          </ThingDef>
+        </value>
       </li>
       <li Class="PatchOperationRemove">
-        <xpath>/Defs/RecipeDef[defName="CookMealSimple" or defName="CookMealSimpleBulk" or defName="CookMealFine" or defName="CookMealFineBulk" or defName="CookMealLavish" or defName="CookMealLavishBulk" or defName="CookMealSurvival" or defName="CookMealSurvivalBulk"]</xpath>
+        <xpath>/Defs/RecipeDef[defName="CookMealFine" or defName="CookMealFineBulk" or defName="CookMealLavish" or defName="CookMealLavishBulk" or defName="CookMealSurvival" or defName="CookMealSurvivalBulk"]</xpath>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/RecipeDef[defName="CookMealSimple"]</xpath>
+        <value>
+          <RecipeDef>
+            <defName>CookMealSimple</defName>
+            <label>dummy</label>
+          </RecipeDef>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/RecipeDef[defName="CookMealSimpleBulk"]</xpath>
+        <value>
+          <RecipeDef>
+            <defName>CookMealSimpleBulk</defName>
+            <label>dummy</label>
+          </RecipeDef>
+        </value>
       </li>
       <li Class="PatchOperationRemove">
         <xpath>/Defs/ScenarioDef[defName="Crashlanded"]/scenario/parts/li[19]</xpath>
