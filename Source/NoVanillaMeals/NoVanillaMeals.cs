@@ -16,7 +16,7 @@ internal static class NoVanillaMeals
             where meal is
             {
                 IsIngestible: true, modContentPack: { IsOfficialMod: true },
-                ingestible: { foodType: FoodTypeFlags.Meal }
+                ingestible.foodType: FoodTypeFlags.Meal
             }
             select meal).ToList();
 
