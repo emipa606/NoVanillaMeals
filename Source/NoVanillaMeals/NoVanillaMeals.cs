@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using RimWorld;
@@ -15,7 +14,7 @@ internal static class NoVanillaMeals
         var vanillaMeals = (from ThingDef meal in DefDatabase<ThingDef>.AllDefsListForReading
             where meal is
             {
-                IsIngestible: true, modContentPack: { IsOfficialMod: true },
+                IsIngestible: true, modContentPack.IsOfficialMod: true,
                 ingestible.foodType: FoodTypeFlags.Meal
             }
             select meal).ToList();
@@ -47,7 +46,7 @@ internal static class NoVanillaMeals
 
         foreach (var mealRecipe in mealRecipes)
         {
-            mealRecipe.factionPrerequisiteTags = new List<string> { "NotForYou" };
+            mealRecipe.factionPrerequisiteTags = ["NotForYou"];
         }
 
         DefDatabase<RecipeDef>.ResolveAllReferences();
