@@ -44,7 +44,8 @@ internal static class NoVanillaMeals
                 select product).Any()
             select recipe;
 
-        foreach (var mealRecipe in mealRecipes)
+        var recipeDefs = mealRecipes as RecipeDef[] ?? mealRecipes.ToArray();
+        foreach (var mealRecipe in recipeDefs)
         {
             mealRecipe.factionPrerequisiteTags = ["NotForYou"];
         }
@@ -81,7 +82,7 @@ internal static class NoVanillaMeals
         for (var index = 0; index < instructions.Count; index++)
         {
             var instructionDef = instructions[index];
-            if (mealRecipes.Contains(instructionDef.recipeDef))
+            if (recipeDefs.Contains(instructionDef.recipeDef))
             {
                 GenGeneric.InvokeStaticMethodOnGenericType(typeof(DefDatabase<>), typeof(InstructionDef), "Remove",
                     instructions[index]);
