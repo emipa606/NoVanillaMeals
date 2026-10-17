@@ -55,9 +55,10 @@ internal static class NoVanillaMeals
         var field = typeof(ScenPart_ThingCount).GetField("thingDef", BindingFlags.NonPublic |
                                                                      BindingFlags.Instance);
 
-        foreach (var scenarioDef in DefDatabase<ScenarioDef>.AllDefsListForReading)
+        foreach (var scenario in DefDatabase<ScenarioDef>.AllDefsListForReading.Select(scenarioDef =>
+                     scenarioDef.scenario))
         {
-            var allParts = scenarioDef.scenario.AllParts.ToList();
+            var allParts = scenario.AllParts.ToList();
             // ReSharper disable once ForCanBeConvertedToForeach, changed during iteration
             for (var i = 0; i < allParts.Count; i++)
             {
@@ -67,7 +68,7 @@ internal static class NoVanillaMeals
                     var thingCount = part as ScenPart_ThingCount;
                     if (vanillaMeals.Contains((ThingDef)field?.GetValue(thingCount)))
                     {
-                        scenarioDef.scenario.RemovePart(part);
+                        scenario.RemovePart(part);
                     }
                 }
                 catch (Exception)
